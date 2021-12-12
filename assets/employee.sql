@@ -17,7 +17,7 @@ CREATE TABLE role (
 );
 
 CREATE TABLE employee (
-     id INT USIGNED AUTO_INCREMENT PRIMARY KEY,
+    id INT USIGNED AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id VARCHAR(30) NOT NULL, 
@@ -28,5 +28,34 @@ CREATE TABLE employee (
     CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
 );
 use employee;
+INSERT INTO department
+    (name)
+VALUES
+    ('Operations')
+    ('Analytics')
+    ('Marketing')
+    ('Executive')
+INSERT INTO role 
+    (title, salary, department_id)
+VALUES
+    ('General Manager', 150000, 1),
+    ('Worker', 50000, 1)
+    ('Analyst', 80000 , 2),
+    ('Lead Analyst', 120000 , 2),
+    ('Marketing manager', 130000 , 3),
+    ('Marketing Team Member', 90000 ,3),
+    ('CEO', 300000 , 4),
+    ('Secretary', 60000 , 4);
+INSERT INTO employee
+    (first_name, last_name, role_id, manager_id)
+VALUES
+    ('Bryan', 'Keller', 4, 1)
+    ('Connor', 'Vaughan', 4, NULL),
+    ('Jamie', 'Foglesong', 1, 2),
+    ('Donald', 'Ford', 1, NULL),
+    ('Trey', 'Kirk', 3, 3),
+    ('Troyaun', 'Ray', 3, NULL),
+    ('Garin', 'Stone', 2, 4),
+    ('Brock', 'Beashore', 2, NULL);
 
     
