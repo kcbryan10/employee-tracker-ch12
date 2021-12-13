@@ -7,13 +7,15 @@ require('console.table');
 
 const promptMessages = {
     viewAllEmployees: "View All Employees",
-    viewByDepartment: "View AllDepartment",
-    viewByManager: "View All Employees By Manager",
+    viewByDepartment: "View All Department",
+    viewAllRoles: "View All Roles",
     addEmployee: "Add An Employee",
     removeEmployee: "Remove An Employee",
     updateRole: "Update Employee Role",
+    viewByManager: "View All Employees By Manager",
     updateEmployeeManager: "Update Employee Manager",
-    viewAllRoles: "View All Roles",
+    
+    
     exit: "Exit"
 };
 
@@ -21,7 +23,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'Bryancool5',
+    password: 'password',
     database: 'employee'
 });
 
